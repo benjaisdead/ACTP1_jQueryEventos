@@ -28,6 +28,7 @@
 	<meta charset="utf-8">
 	<title>Ejercicio 02</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<header class="header__main">
@@ -137,4 +138,26 @@
 		<p class="footer__legal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sint praesentium laboriosam atque placeat architecto, maxime temporibus sequi veniam quae culpa accusantium dignissimos natus perferendis mollitia quam optio incidunt. Esse!</p>
 	</footer>
 </body>
+<script>
+	// 01 - Pinterest
+	//	$('article:nth-child(5) ul').find('li:last-child a').text("Pinterest").attr("href", "https://www.pinterest.com")
+	var sel = $('.article').eq(3)
+												 .children('.article__body')
+												 .children('.article__socialnetworks')
+												 .children('li')
+												 .eq(3)
+												 .children('a')
+												 .attr('href', 'http://www.pinterest.com/')
+												 .text('Pinterest');
+
+	console.log(sel);
+
+	// 02 - PreventDefault OK
+	$('li', 'a' [href="#"]).on('click', function(event){
+		event.preventDefault();
+	});
+
+	// 03 - H2 Font size OK
+	$('.header__main h2').css('font-size', '2em');
+</script>
 </html>

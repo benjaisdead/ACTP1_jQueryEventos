@@ -1,6 +1,6 @@
 <!--
 
-	El javascript obstrusivo en este archivo dificulta la lectura del código y repite una 
+	El javascript obstrusivo en este archivo dificulta la lectura del código y repite una
 	misma sentencia muchas veces. Modifícalo para lograr que el evento click se gatille
 	en todas las imágenes desde una misma función y, de esa forma, permitir que el código
 	sea más legible y permita encontrar los errores de forma más sencilla.
@@ -45,4 +45,9 @@
 	</div>
 
 </body>
+<script>
+	$('.images__image').on('click', function(){
+		alert($(this).attr('alt'));
+	})
+</script>
 </html>
